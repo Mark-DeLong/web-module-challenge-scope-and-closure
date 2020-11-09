@@ -111,8 +111,17 @@ function finalScore(inningCB, numCB){
 // the function should take the inning function as an argument 
 // it should return an object with with a score for home and a score for away that that populates from invoking the inning callback. */
 
-function getInningScore(/*Your Code Here */) {
-  /*Your Code Here */
+function getInningScore(inningCB, numCB) {
+  let inningScore = {
+    "Home": 0,
+    "Away": 0
+  }
+
+  const currentScore = inningCB(numCB)
+  inningScore.Home = currentScore
+  inningScore.Away = currentScore
+
+  return inningScore
 }
 /* Task 5: scoreboard()
 Use the scoreboard function below to do the following:
