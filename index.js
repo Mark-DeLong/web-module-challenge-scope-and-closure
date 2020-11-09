@@ -68,10 +68,9 @@ Use the inning function below to do the following:
   For example: invoking inning() should return a numerical score value of 0, 1, or 2
 */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(){
+  let num = Math.floor(Math.random() * Math.floor(2))
+  return num 
 }
 
 /* Task 3: finalScore()
@@ -87,10 +86,24 @@ For example: invoking finalScore(inning, 9) might return this object:
 }
 */ 
 
-function finalScore(/*code Here*/){
+function finalScore(inningCB, numCB){
+  const totalScore = {
+    "Home": 0,
+    "Away": 0
+  }
+  let homeScore = 0
+  let awayScore = 0
+  let i
 
-  /*Code Here*/
+  for (i = 0; i < 9; i++){
+    const currentScore = inningCB(numCB)
+    let homeScore = homeScore + currentScore
+    let awayScore = awayScore + currentScore
 
+    totalScore.Home = homeScore
+    totalScore.Away = awayScore
+  }
+  return totalScore
 }
 
 /* Task 4: 
