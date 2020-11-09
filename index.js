@@ -123,6 +123,7 @@ function getInningScore(inningCB, numCB) {
 
   return inningScore
 }
+
 /* Task 5: scoreboard()
 Use the scoreboard function below to do the following:
   1. Receive a callback function, that you create, called `getInningScore`
@@ -167,8 +168,14 @@ Use the scoreboard function below to do the following:
   */
 
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(getInningScoreCB, inningCB) {
+  let scoreboard = []
+  let inningNumber
+
+  for (inningNumber = 1; inningNumber < 10; inningNumber++) {
+    scoreboard.push(`Inning ${inningNumber}: Away ${getInningScore.Away} - Home ${getMatchedCSSRules.Home}`)
+  }
+  return scoreboard
 }
 
 
