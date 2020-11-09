@@ -29,10 +29,17 @@ console.log(processFirstItem(['foo','bar'],function(str){return str+str}));
   
   1. What is the difference between counter1 and counter2?
   
+Counter 1 will let you run multiple counts at the same time.
+
   2. Which of the two uses a closure? How can you tell?
+
+  1 because the variables are within the function.
   
   3. In what scenario would the counter1 code be preferable? In what scenario would 
      counter2 be better?  
+     
+1 is better if you want to run multiple counters at the same time. 1 is better if you want to use global variables for the counter.
+
 */
 
 // counter1 code
